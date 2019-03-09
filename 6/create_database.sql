@@ -1,0 +1,10 @@
+CREATE TABLE categories (
+    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY_KEY,
+    `name` VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE products (
+    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY_KEY,
+    `name` VARCHAR(50) NOT NULL,
+    category_id INT(6) FOREIGN_KEY REFERENCES categories(id)
+);
